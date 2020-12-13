@@ -1,5 +1,40 @@
-type User @model {
+type Player @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  PlayerTeams: [PlayerTeam] @connection(keyName: "byPlayer", fields: ["id"])
+}
+
+type Facility @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["userID"]) {
+  id: ID!
+  name: String
+  address: String
+  city: String
+  state: String
+  manager: String
+  employees: [String]
+  userID: ID!
+}
+
+type User @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String!
   username: String!
+  userType: String!
+  Facilities: [Facility] @connection(keyName: "byUser", fields: ["id"])
 }
+
+type Team @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+}
+
+type PlayerTeam @model(queries: null) @key(name: "byPlayer", fields: ["playerID", "teamID"]) @key(name: "byTeam", fields: ["teamID", "playerID"]) @auth(rules: [{allow: public}, {allow: public}]) {
+  id: ID!
+  playerID: ID!
+  teamID: ID!
+  player: Player! @connection(fields: ["playerID"])
+  team: Team! @connection(fields: ["teamID"])
+}
+ 
