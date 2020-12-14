@@ -1,19 +1,25 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-keeper-dev-123142-authRole",
-            "UnauthRoleArn": "arn:aws:iam::755781514070:role/amplify-keeper-dev-123142-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::755781514070:role/amplify-keeper-dev-123142-authRole",
+            "AuthRoleName": "amplify-keeper-dev-142845-authRole",
+            "UnauthRoleArn": "arn:aws:iam::755781514070:role/amplify-keeper-dev-142845-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::755781514070:role/amplify-keeper-dev-142845-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-keeper-dev-123142-deployment",
-            "UnauthRoleName": "amplify-keeper-dev-123142-unauthRole",
-            "StackName": "amplify-keeper-dev-123142",
-            "StackId": "arn:aws:cloudformation:us-east-1:755781514070:stack/amplify-keeper-dev-123142/c93750f0-6d23-11ea-a67e-124c09213289",
-            "AmplifyAppId": "d1oqwka6lcnsam"
+            "DeploymentBucketName": "amplify-keeper-dev-142845-deployment",
+            "UnauthRoleName": "amplify-keeper-dev-142845-unauthRole",
+            "StackName": "amplify-keeper-dev-142845",
+            "StackId": "arn:aws:cloudformation:us-east-1:755781514070:stack/amplify-keeper-dev-142845/97ab1f30-3e42-11eb-a342-0e55cf8eb989",
+            "AmplifyAppId": "d1f73t5ko9p0tg"
         },
         "categories": {
             "auth": {
-                "keeperbb2eb944": {}
+                "keeper32bb1bbd": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1f73t5ko9p0tg",
+                    "type": "manual"
+                }
             }
         }
     }

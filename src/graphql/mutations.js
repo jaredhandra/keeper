@@ -1,129 +1,45 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createUser = /* GraphQL */ `
-  mutation CreateUser(
-    $input: CreateUserInput!
-    $condition: ModelUserConditionInput
+export const createMyType = /* GraphQL */ `
+  mutation CreateMyType(
+    $input: CreateMyTypeInput!
+    $condition: ModelMyTypeConditionInput
   ) {
-    createUser(input: $input, condition: $condition) {
+    createMyType(input: $input, condition: $condition) {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
+      title
+      content
+      price
+      rating
     }
   }
 `;
-export const updateUser = /* GraphQL */ `
-  mutation UpdateUser(
-    $input: UpdateUserInput!
-    $condition: ModelUserConditionInput
+export const updateMyType = /* GraphQL */ `
+  mutation UpdateMyType(
+    $input: UpdateMyTypeInput!
+    $condition: ModelMyTypeConditionInput
   ) {
-    updateUser(input: $input, condition: $condition) {
+    updateMyType(input: $input, condition: $condition) {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
+      title
+      content
+      price
+      rating
     }
   }
 `;
-export const deleteUser = /* GraphQL */ `
-  mutation DeleteUser(
-    $input: DeleteUserInput!
-    $condition: ModelUserConditionInput
+export const deleteMyType = /* GraphQL */ `
+  mutation DeleteMyType(
+    $input: DeleteMyTypeInput!
+    $condition: ModelMyTypeConditionInput
   ) {
-    deleteUser(input: $input, condition: $condition) {
+    deleteMyType(input: $input, condition: $condition) {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
-    }
-  }
-`;
-export const createTeam = /* GraphQL */ `
-  mutation CreateTeam(
-    $input: CreateTeamInput!
-    $condition: ModelTeamConditionInput
-  ) {
-    createTeam(input: $input, condition: $condition) {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
-    }
-  }
-`;
-export const updateTeam = /* GraphQL */ `
-  mutation UpdateTeam(
-    $input: UpdateTeamInput!
-    $condition: ModelTeamConditionInput
-  ) {
-    updateTeam(input: $input, condition: $condition) {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
-    }
-  }
-`;
-export const deleteTeam = /* GraphQL */ `
-  mutation DeleteTeam(
-    $input: DeleteTeamInput!
-    $condition: ModelTeamConditionInput
-  ) {
-    deleteTeam(input: $input, condition: $condition) {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
+      title
+      content
+      price
+      rating
     }
   }
 `;

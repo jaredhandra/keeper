@@ -2,13 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Amplify, * as AmplifyModules from 'aws-amplify'
-import { AmplifyPlugin } from 'aws-amplify-vue'
-import awsconfig from './aws-exports'
-import 'tailwindcss/tailwind.css'
-Amplify.configure(awsconfig)
+import Amplify from 'aws-amplify'
+import '@aws-amplify/ui-vue'
+import awsExports from './aws-exports'
+import './assets/tailwind.css'
 
-Vue.use(AmplifyPlugin, AmplifyModules)
+Amplify.configure(awsExports)
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,111 +1,36 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser {
-    onCreateUser {
+export const onCreateMyType = /* GraphQL */ `
+  subscription OnCreateMyType {
+    onCreateMyType {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
+      title
+      content
+      price
+      rating
     }
   }
 `;
-export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser {
-    onUpdateUser {
+export const onUpdateMyType = /* GraphQL */ `
+  subscription OnUpdateMyType {
+    onUpdateMyType {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
+      title
+      content
+      price
+      rating
     }
   }
 `;
-export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser {
-    onDeleteUser {
+export const onDeleteMyType = /* GraphQL */ `
+  subscription OnDeleteMyType {
+    onDeleteMyType {
       id
-      name
-      username
-      userType
-      teams {
-        items {
-          id
-          name
-          players
-        }
-        nextToken
-      }
-    }
-  }
-`;
-export const onCreateTeam = /* GraphQL */ `
-  subscription OnCreateTeam {
-    onCreateTeam {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
-    }
-  }
-`;
-export const onUpdateTeam = /* GraphQL */ `
-  subscription OnUpdateTeam {
-    onUpdateTeam {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
-    }
-  }
-`;
-export const onDeleteTeam = /* GraphQL */ `
-  subscription OnDeleteTeam {
-    onDeleteTeam {
-      id
-      name
-      user {
-        id
-        name
-        username
-        userType
-        teams {
-          nextToken
-        }
-      }
-      players
+      title
+      content
+      price
+      rating
     }
   }
 `;
