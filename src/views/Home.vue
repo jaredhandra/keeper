@@ -1,12 +1,14 @@
 <template>
   <div class="home">
     <div v-if="!signedIn">
-      <amplify-authenticator v-bind:authConfig="authConfig"></amplify-authenticator>
+      <amplify-authenticator :auth-config="authConfig" />
     </div>
     <div v-if="signedIn">
-      <amplify-sign-out class="signout"></amplify-sign-out>
+      <amplify-sign-out class="signout" />
       <h1>Hello World</h1>
-      <img alt="Vue logo" src="../assets/logo.png" />
+      <img
+        alt="Vue logo"
+        src="../assets/logo.png">
     </div>
   </div>
 </template>
@@ -17,23 +19,7 @@ import { AmplifyEventBus } from 'aws-amplify-vue'
 import { Auth } from 'aws-amplify'
 
 export default {
-  name: "Home",
-  async beforeCreate () {
-    try {
-      const user = await Auth.currentAuthenticatedUser()
-      console.log(user)
-      this.signedIn = true
-    } catch (err) {
-      this.signedIn = false
-    }
-    AmplifyEventBus.$on('authState', info => {
-      if (info === 'signedIn') {
-        this.signedIn = true
-      } else {
-        this.signedIn = false
-      }
-    });
-  },
+  name: 'Home',
   data () {
     return {
       authConfig: {
@@ -63,6 +49,21 @@ export default {
       },
       signedIn: false
     }
+  },
+  async beforeCreate () {
+    try {
+      await Auth.currentAuthenticatedUser()
+      this.signedIn = true
+    } catch (err) {
+      this.signedIn = false
+    }
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        this.signedIn = true
+      } else {
+        this.signedIn = false
+      }
+    })
   }
-};
+}
 </script>
