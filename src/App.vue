@@ -2,21 +2,20 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link v-if="authState === 'signedin' && user" to="/admin"> Admin Panel </router-link>
+      <amplify-sign-out></amplify-sign-out>
     </div>
     <div class="container mx-auto">
-      <div class="flex items-center justify-center h-screen">
+      <div class="flex items-center justify-center">
         <div v-if="authState !== 'signedin'">You are signed out.</div>
         <amplify-authenticator>
           <div v-if="authState === 'signedin' && user">
-            <div>Hello</div>
+            <router-view/>
           </div>
-          <amplify-sign-out></amplify-sign-out>
         </amplify-authenticator>
       </div>
     </div>
-    <!-- <router-view/> -->
-
   </div>
 </template>
 <script>
