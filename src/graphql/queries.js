@@ -1,32 +1,64 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getMyType = /* GraphQL */ `
-  query GetMyType($id: ID!) {
-    getMyType(id: $id) {
-      id
-      title
-      content
-      price
-      rating
+export const syncFacilities = /* GraphQL */ `
+  query SyncFacilities(
+    $filter: ModelFacilityFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncFacilities(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        name
+        location
+        employees
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
-export const listMyTypes = /* GraphQL */ `
-  query ListMyTypes(
-    $filter: ModelMyTypeFilterInput
+export const getFacility = /* GraphQL */ `
+  query GetFacility($id: ID!) {
+    getFacility(id: $id) {
+      id
+      name
+      location
+      employees
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listFacilitys = /* GraphQL */ `
+  query ListFacilitys(
+    $filter: ModelFacilityFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listMyTypes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listFacilitys(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        title
-        content
-        price
-        rating
+        name
+        location
+        employees
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;

@@ -1,45 +1,51 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createMyType = /* GraphQL */ `
-  mutation CreateMyType(
-    $input: CreateMyTypeInput!
-    $condition: ModelMyTypeConditionInput
+export const createFacility = /* GraphQL */ `
+  mutation CreateFacility(
+    $input: CreateFacilityInput!
+    $condition: ModelFacilityConditionInput
   ) {
-    createMyType(input: $input, condition: $condition) {
+    createFacility(input: $input, condition: $condition) {
       id
-      title
-      content
-      price
-      rating
+      name
+      location
+      employees
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const updateMyType = /* GraphQL */ `
-  mutation UpdateMyType(
-    $input: UpdateMyTypeInput!
-    $condition: ModelMyTypeConditionInput
+export const updateFacility = /* GraphQL */ `
+  mutation UpdateFacility(
+    $input: UpdateFacilityInput!
+    $condition: ModelFacilityConditionInput
   ) {
-    updateMyType(input: $input, condition: $condition) {
+    updateFacility(input: $input, condition: $condition) {
       id
-      title
-      content
-      price
-      rating
+      name
+      location
+      employees
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const deleteMyType = /* GraphQL */ `
-  mutation DeleteMyType(
-    $input: DeleteMyTypeInput!
-    $condition: ModelMyTypeConditionInput
+export const deleteFacility = /* GraphQL */ `
+  mutation DeleteFacility(
+    $input: DeleteFacilityInput!
+    $condition: ModelFacilityConditionInput
   ) {
-    deleteMyType(input: $input, condition: $condition) {
+    deleteFacility(input: $input, condition: $condition) {
       id
-      title
-      content
-      price
-      rating
+      name
+      location
+      employees
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
